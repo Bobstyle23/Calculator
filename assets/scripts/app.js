@@ -1,6 +1,7 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 let logEntries = [];
+let result = 0;
 
 // Gets input from input field
 function getUserNumberInput() {
@@ -50,6 +51,10 @@ function calculate(operation) {
       currentResult /= enteredNumber;
       operator = "/";
       break;
+    case "RESULT":
+      result = currentResult += enteredNumber;
+      operator = "=";
+      break;
   }
   createAndWriteOutput(operator, initialResult, enteredNumber);
   writeToLog(operation, initialResult, enteredNumber, currentResult);
@@ -59,3 +64,4 @@ addBtn.addEventListener("click", calculate.bind(this, "ADD"));
 subtractBtn.addEventListener("click", calculate.bind(this, "SUBTRACT"));
 multiplyBtn.addEventListener("click", calculate.bind(this, "MULTIPLY"));
 divideBtn.addEventListener("click", calculate.bind(this, "DIVIDE"));
+resultBtn.addEventListener("click", calculate.bind(this, "RESULT"));
