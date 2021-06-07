@@ -30,6 +30,10 @@ function writeToLog(
   console.log(logEntries);
 }
 
+function clearInputField() {
+  document.getElementById("input-number").value = "";
+}
+
 function calculate(operation) {
   const enteredNumber = getUserNumberInput();
   const initialResult = currentResult;
