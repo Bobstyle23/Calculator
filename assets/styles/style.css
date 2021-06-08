@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -15,11 +16,22 @@ header {
   color: white;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   width: 100%;
 }
 
-#results,
+#results {
+  margin: 2rem auto;
+  width: 40rem;
+  max-width: 90%;
+  border: 1px solid #023d6d;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #023d6d;
+  text-align: center;
+}
+
 #calculator {
   margin: 2rem auto;
   width: 40rem;
@@ -28,10 +40,6 @@ header {
   border-radius: 10px;
   padding: 1rem;
   color: #023d6d;
-}
-
-#results {
-  text-align: center;
 }
 
 #calculator input {
@@ -63,19 +71,18 @@ header {
   outline: none;
 }
 
-#calculator button:hover,
-#calculator button:active {
+#calculator button:hover, #calculator button:active {
   background: #084f88;
   border-color: #084f88;
-}
-
-#calc-actions button {
-  width: 4rem;
 }
 
 #calc-actions {
   margin-top: 1rem;
   text-align: center;
+}
+
+#calc-actions button {
+  width: 4rem;
 }
 
 .refresh {
@@ -87,3 +94,4 @@ header {
   border-radius: 10px;
   border: 2px solid #023d6d;
 }
+/*# sourceMappingURL=style.css.map */
